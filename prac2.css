@@ -1,0 +1,17 @@
+/* Assigment 2-2 */
+h1{font-family: "raleway", sans-serif;}
+h2 {text-align: left; font-family: "raleway", sans-serif;}
+p {font-family: "Noto Serif", serif;}
+a {color:darkgreen;}
+del {color:grey;}
+mark {color:darkblue; background-color:pink;}
+#pre {font-family:monospace;}
+
+/* Assigment 2-3 */
+h3 {color: RGBA(0,0,139,0.8);}
+.transparent-text {color: RGBA(0,0,0,0.5);}
+
+/* Assigment 2-4 */
+body {
+background-color: #dcf5f5;
+background-image: url('https://myuni.adelaide.edu.au/courses/75039/files/10149623/download?wrap=1');}
