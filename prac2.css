@@ -21,3 +21,9 @@ h4 {font-family: "raleway", sans-serif; font-weight: normal; font-style: italic;
 #quote {font-family: "raleway"; color: dimgrey; line-height: 1.5; word-spacing:0.2em; text-align: justify;}
 #icon {color: #BFCFD4; margin: 0 auto; text-align:center;}
 #content {background-color:white; border: 1px solid darkgrey; border-radius: 8px;}
+
+/* Assignment 2-9 */
+#list {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: darkgrey; 
+    color:white; font-family: "raleway";}
+  .internal {float: left;}
+  
