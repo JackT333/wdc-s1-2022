@@ -15,3 +15,9 @@ h3 {color: RGBA(0,0,139,0.8);}
 .tiled-background {
 background-color: #dcf5f5;
 background-image: url("cross.png");}
+
+/* Assigment 2-8 */
+h4 {font-family: "raleway", sans-serif; font-weight: normal; font-style: italic; text-decoration: underline;}
+#quote {font-family: "raleway"; color: dimgrey; line-height: 1.5; word-spacing:0.2em; text-align: justify;}
+#icon {color: #BFCFD4; margin: 0 auto; text-align:center;}
+#content {background-color:white; border: 1px solid darkgrey; border-radius: 8px;}
