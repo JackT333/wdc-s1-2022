@@ -29,3 +29,7 @@ h4 {font-family: "raleway", sans-serif; font-weight: normal; font-style: italic;
 ol.number{list-style-type: decimal;}
 ul.square{list-style-type: square;}
 ol.roman_numerals {list-style-type: lower-roman;}
+
+/* Assignment 2-5 */
+.blue {color:blue;}
+.fancy {font-family: cursive;}
