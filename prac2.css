@@ -26,4 +26,6 @@ h4 {font-family: "raleway", sans-serif; font-weight: normal; font-style: italic;
 #list {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: darkgrey; 
     color:white; font-family: "raleway";}
   .internal {float: left;}
-  
+ol.number{list-style-type: decimal;}
+ul.square{list-style-type: square;}
+ol.roman_numerals {list-style-type: lower-roman;}
