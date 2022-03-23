@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>This page definitely has a title</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <ul id="list"></ul>
+        <p id="text"><strong>NOT</strong> working</p>
+        
+        <script>
+            var users = ['Bob Lastname',
+                         'Alice Person',
+                         'Franco Familyname',
+                         'Nona Surname',
+                         'Umberto Lastname',
+                         'Xia Person',
+                         'Milton Surname',
+                         'Louisa Familyname',
+                         'Jia Person',
+                         'Shannah Lastname',
+                         'Deon Surname',
+                         'Loreen Person'];
+            var list = document.getElementById("list");
+
+            //It must be less than and NOT less than or equal to because you can't access boundaries out of array
+            for(var i=0; i < users.length; i++){
+                var li = document.createElement("LI"); //Create new <li>
+                var space = users[i].indexOf(" "); // Get location of space between firstname and surname
+                li.innerHTML = users[i].substring(0, space); // Extract firstname from users and populate <li>
+                list.appendChild(li); // append li to ul 
+            
+            var p = document.getElementById("text").innerHTML = '<p>It <strong>IS</strong> working</p>';
+        </script>
+    </body>
+</html>
