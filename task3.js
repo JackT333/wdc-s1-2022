@@ -10,7 +10,7 @@ function mouse() {
     count++;
 }
 
-//Task 3.2 function's
+//Task 3.2 and 3.4 function's
 var display = " ";
 
 function time() {
@@ -20,9 +20,20 @@ function time() {
     var time = document.getElementsByClassName("post-time");
 
     var post = document.getElementsByClassName("post-content");
+    
+    var color = 'red';
 
-    display = display + date + "<br/>" + post[0].value + "<br/>";
+    var x = parseInt(document.getElementsByName("quantity")[0].value);
+    
+    if (document.getElementsByName("color")[0].checked) {
 
+            color = document.getElementsByName("color")[0].value;
+    }
+    
+    for (var i = 0; i < x; i++) {
+
+            display += date + "<br/> <span style = 'color: " + color + "' > " + post[0].value + " </span><br/>";
+    }
     time[0].innerHTML = display;
 }
 
