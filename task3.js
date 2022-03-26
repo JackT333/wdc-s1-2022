@@ -13,19 +13,65 @@ function mouse() {
 }
 
 //Task 3.2 function's
-var display = " ";
-
 function date_and_time() {
 
-    var D = new Date();
+    var date = document.createElement("P");
 
-    var time = document.getElementsByClassName("post-time")
+    var input = document.createElement("P");
 
-    var post = document.getElementsByClassName("post-content");
+    date.className = "post-time";
 
-    display = display + D +"<br/>" + post[0].value + "<br/>";
+    input.className = "post-content";
 
-    time[0].innerHTML = display;
+    input.innerHTML = document.getElementsByTagName("textarea")[0].value;
+
+    var output = document.getElementById("posts");
+
+    date.innerHTML = new Date();
+
+    var select = document.getElementsByName("color");
+
+    for (let i = 0; i < select.length; i++) {
+
+        if (select[i].checked == true) {
+
+            input.style.color = select[i].value;
+        }
+    }
+    var pointed = document.getElementsByName("style");
+
+    for (let i = 0; i < pointed.length; i++) {
+
+        if (pointed[0].checked == true) {
+
+            input.style.fontWeight = "bold";
+        }
+
+        if (pointed[1].checked == true) {
+
+            input.style.fontStyle = "italic";
+        }
+    }
+    var amount = document.getElementsByName("quantity")[0].value;
+
+    var display = document.getElementsByName("visible")[0].value;
+
+    for (let i = 0; i < amount; i++) {
+
+         temp.appendChild(input.cloneNode(true));
+    }
+
+    while (output.firstChild) {
+
+        output.firstChild.remove();
+    }
+
+    for (let i = 0; i < display; i++) {
+
+        output.appendChild(temp.childNodes[i * 2].cloneNode(true));
+
+        output.appendChild(temp.childNodes[(i * 2) + 1].cloneNode(true));
+    }
 }
 
 //Task 3.3 function's
@@ -56,7 +102,6 @@ function hidemenu() {
 
 //Task 3.5 function's
 function change_backgroundcolor(e) {
+    
     document.body.style.backgroundColor = e.value;
 }
-
-//Task 3.6 function's
