@@ -12,7 +12,7 @@ function mouse() {
     count++;
 }
 
-//Task 3.2 function's
+//Task 3.2 and 3.4 function's
 function date_and_time() {
 
     var date = document.createElement("P");
@@ -29,29 +29,31 @@ function date_and_time() {
 
     date.innerHTML = new Date();
 
-    var select = document.getElementsByName("color");
+    var chooseColor = document.getElementsByName("color");
 
-    for (let i = 0; i < select.length; i++) {
+    for (let i = 0; i < chooseColor.length; i++) {
 
-        if (select[i].checked == true) {
+        if (chooseColor[i].checked == true) {
 
-            input.style.color = select[i].value;
+            input.style.color = chooseColor[i].value;
         }
     }
-    var pointed = document.getElementsByName("style");
 
-    for (let i = 0; i < pointed.length; i++) {
+    var chooseFont = document.getElementsByName("style");
 
-        if (pointed[0].checked == true) {
+    for (let i = 0; i < chooseFont.length; i++) {
+
+        if (chooseFont[0].checked == true) {
 
             input.style.fontWeight = "bold";
         }
 
-        if (pointed[1].checked == true) {
+        if (chooseFont[1].checked == true) {
 
             input.style.fontStyle = "italic";
         }
     }
+
     var amount = document.getElementsByName("quantity")[0].value;
 
     var display = document.getElementsByName("visible")[0].value;
@@ -97,11 +99,8 @@ function hidemenu() {
     menu.style.display = "none";
 }
 
-//Task 3.4 function's
-
-
 //Task 3.5 function's
 function change_backgroundcolor(e) {
-    
+
     document.body.style.backgroundColor = e.value;
 }
