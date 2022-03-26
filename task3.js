@@ -1,6 +1,8 @@
 //Task 3.1 function's
 var count = 1;
 
+var temp = document.createElement("DIV");
+
 function mouse() {
 
     var a = document.getElementById("mcount");
@@ -10,30 +12,19 @@ function mouse() {
     count++;
 }
 
-//Task 3.2 and 3.4 function's
+//Task 3.2 function's
 var display = " ";
 
-function time() {
+function date_and_time() {
 
-    var date = new Date();
+    var D = new Date();
 
-    var time = document.getElementsByClassName("post-time");
+    var time = document.getElementsByClassName("post-time")
 
     var post = document.getElementsByClassName("post-content");
-    
-    var color = 'red';
 
-    var x = parseInt(document.getElementsByName("quantity")[0].value);
-    
-    if (document.getElementsByName("color")[0].checked) {
+    display = display + D +"<br/>" + post[0].value + "<br/>";
 
-            color = document.getElementsByName("color")[0].value;
-    }
-    
-    for (var i = 0; i < x; i++) {
-
-            display += date + "<br/> <span style = 'color: " + color + "' > " + post[0].value + " </span><br/>";
-    }
     time[0].innerHTML = display;
 }
 
@@ -67,3 +58,5 @@ function hidemenu() {
 function change_backgroundcolor(e) {
     document.body.style.backgroundColor = e.value;
 }
+
+//Task 3.6 function's
