@@ -12,67 +12,62 @@ function mouse() {
     count++;
 }
 
-//Task 3.2 and 3.4 function's
+//Task 3.2 and 3.4 and 3.6 function's
 function date_and_time() {
 
-    var date = document.createElement("P");
+    var date = new Date();
 
-    var input = document.createElement("P");
+    var post = document.getElementsByTagName("textarea");
 
-    date.className = "post-time";
+    var content = document.createElement("x");
 
-    input.className = "post-content";
+    var time = document.createElement("x");
 
-    input.innerHTML = document.getElementsByTagName("textarea")[0].value;
+    content.className = "post-content";
 
-    var output = document.getElementById("posts");
+    time.className = "post-time";
 
-    date.innerHTML = new Date();
+    time.innerHTML = date;
 
-    var chooseColor = document.getElementsByName("color");
+    content.innerHTML = post[0].value ;
 
-    for (let i = 0; i < chooseColor.length; i++) {
+    var amount = document.getElementsByName("visible")[0].value;
 
-        if (chooseColor[i].checked == true) {
+    var color = " ";
 
-            input.style.color = chooseColor[i].value;
-        }
+    var fontBold = " ";
+
+    var fontItalic = " ";
+
+    var font = document.getElementsByName("style");
+
+    var colorName = document.getElementsByName("color");
+
+    if (colorName[0].checked == true) {
+
+        color = "blue";
     }
 
-    var chooseFont = document.getElementsByName("style");
+    else if (colorName[1].checked == true) {
 
-    for (let i = 0; i < chooseFont.length; i++) {
-
-        if (chooseFont[0].checked == true) {
-
-            input.style.fontWeight = "bold";
-        }
-
-        if (chooseFont[1].checked == true) {
-
-            input.style.fontStyle = "italic";
-        }
+        color = "red";
     }
 
-    var amount = document.getElementsByName("quantity")[0].value;
+    if (font[0].checked == true) {
 
-    var display = document.getElementsByName("visible")[0].value;
-
-    for (let i = 0; i < amount; i++) {
-
-         temp.appendChild(input.cloneNode(true));
+        fontBold = "bold";
     }
 
-    while (output.firstChild) {
+    if (font[1].checked == true) {
 
-        output.firstChild.remove();
+        fontItalic = "italic";
     }
 
-    for (let i = 0; i < display; i++) {
+    document.getElementById("posts").innerHTML = " ";
 
-        output.appendChild(temp.childNodes[i * 2].cloneNode(true));
+    for (var i = 0; i < amount; i++) {
 
-        output.appendChild(temp.childNodes[(i * 2) + 1].cloneNode(true));
+        document.getElementById("posts").innerHTML+="<div class='post-time'>"+time.innerHTML+"</div>"+"<br/>"+"<div class='post-content' style='color:"+color+";font-style:"+fontItalic+";font-weight:"+fontBold+"'>"+content.innerHTML+"</div>"+"<br/>";
     }
 }
 
